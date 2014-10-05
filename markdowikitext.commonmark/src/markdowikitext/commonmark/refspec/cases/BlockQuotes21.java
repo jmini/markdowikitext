@@ -1,0 +1,32 @@
+package markdowikitext.commonmark.refspec.cases;
+
+import markdowikitext.commonmark.refspec.RefSpecCase;
+
+public class BlockQuotes21 extends RefSpecCase {
+
+  public BlockQuotes21() {
+    super(createInput(), createOutput());
+  }
+
+  public static String createInput() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("> bar");
+    sb.append(BR);
+    sb.append(">");
+    sb.append(BR);
+    sb.append("baz");
+    return sb.toString();
+  }
+
+  public static String createOutput() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("<blockquote>");
+    sb.append(BR);
+    sb.append("<p>bar</p>");
+    sb.append(BR);
+    sb.append("</blockquote>");
+    sb.append(BR);
+    sb.append("<p>baz</p>");
+    return sb.toString();
+  }
+}

@@ -1,5 +1,26 @@
 `Markdowikitext` is a project to test the `mylyn-wikitext.markdown` converter provided by the [Mylyn Wikitext](http://wiki.eclipse.org/Mylyn/WikiText) engine (part of the [Mylyn Docs](http://wiki.eclipse.org/Mylyn/Docs) project, an open-source project hosted by the [eclipse foundation](http://www.eclipse.org/org/)).
 
+
+Description / usage
+===================
+
+markdowikitext.commonmark 
+-------------------------
+
+I have transformed the [CommonMark Spec](http://spec.commonmark.org/) into a JUnit test case: `CommonMarkTestBase`.
+The class is abstract, because the idea is to plug several conversion engines.
+The test class is near to the tests contained in the `mylyn-wikiktext` project, see [MarkdownLanguageTest](http://git.eclipse.org/c/mylyn/org.eclipse.mylyn.docs.git/tree/org.eclipse.mylyn.wikitext.markdown.tests/src/org/eclipse/mylyn/internal/wikitext/markdown/tests/MarkdownLanguageTest.java) for example.
+
+I have chosen not to compare directly the HTML output, but to match it against a regular expression (in order to ignore whitespace near the HTML tags, line breaks and so on). 
+This should provide a little bit more flexibility. 
+If you think that the expressions should be improved, feel free to tell how. 
+
+One of the converters that can be plug-in is a dummy implementation: `RefSpecParser`.
+It just returns the HTML output defined in the specification.
+The `RefSpecTest` class ensures that the regular expressions defined in the test suite are working with the output defined in the specification.
+It is one way to ensure the quality of the test suite.
+
+
 Issue tracker / Get in touch
 ============================
 
