@@ -20,6 +20,19 @@ It just returns the HTML output defined in the specification.
 The `RefSpecTest` class ensures that the regular expressions defined in the test suite are working with the output defined in the specification.
 It is one way to ensure the quality of the test suite.
 
+markdowikitext.commonmark.generator
+-----------------------------------
+
+The code I have used to generate `markdowikitext.commonmark`.
+This is written with [Xtend](http://www.eclipse.org/xtend).
+
+To open and compile it you will need:
+
+* An IDE supporting the Xtend language
+* Additional jars as dependencies (check the `libs` folder and replace the txt placeholder with the real jars)
+
+The main class is: `markdowikitext.commonmark.generator.Main`. Run it as simple java application.
+
 
 Issue tracker / Get in touch
 ============================
