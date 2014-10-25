@@ -10,13 +10,13 @@ public class Autolinks06 extends RefSpecCase {
 
   public static String createInput() {
     StringBuilder sb = new StringBuilder();
-    sb.append("<foo@bar.baz.com>");
+    sb.append("<foo@bar.example.com>");
     return sb.toString();
   }
 
   public static String createOutput() {
     StringBuilder sb = new StringBuilder();
-    sb.append("<p><a href=\"mailto:foo@bar.baz.com\">foo@bar.baz.com</a></p>");
+    sb.append("<p><a href=\"mailto:foo@bar.example.com\">foo@bar.example.com</a></p>");
     return sb.toString();
   }
 }

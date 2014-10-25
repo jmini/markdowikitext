@@ -15,6 +15,10 @@ public class HorizontalRules13 extends RefSpecCase {
     sb.append("");
     sb.append(BR);
     sb.append("a------");
+    sb.append(BR);
+    sb.append("");
+    sb.append(BR);
+    sb.append("---a---");
     return sb.toString();
   }
 
@@ -23,6 +27,8 @@ public class HorizontalRules13 extends RefSpecCase {
     sb.append("<p>_ _ _ _ a</p>");
     sb.append(BR);
     sb.append("<p>a------</p>");
+    sb.append(BR);
+    sb.append("<p>---a---</p>");
     return sb.toString();
   }
 }

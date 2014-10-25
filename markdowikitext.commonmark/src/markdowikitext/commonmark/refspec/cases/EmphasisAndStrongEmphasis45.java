@@ -10,13 +10,13 @@ public class EmphasisAndStrongEmphasis45 extends RefSpecCase {
 
   public static String createInput() {
     StringBuilder sb = new StringBuilder();
-    sb.append("___foo bar___");
+    sb.append("11_15_32");
     return sb.toString();
   }
 
   public static String createOutput() {
     StringBuilder sb = new StringBuilder();
-    sb.append("<p><strong><em>foo bar</em></strong></p>");
+    sb.append("<p>11_15_32</p>");
     return sb.toString();
   }
 }

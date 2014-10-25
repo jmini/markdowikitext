@@ -10,13 +10,13 @@ public class Autolinks13 extends RefSpecCase {
 
   public static String createInput() {
     StringBuilder sb = new StringBuilder();
-    sb.append("http://google.com");
+    sb.append("http://example.com");
     return sb.toString();
   }
 
   public static String createOutput() {
     StringBuilder sb = new StringBuilder();
-    sb.append("<p>http://google.com</p>");
+    sb.append("<p>http://example.com</p>");
     return sb.toString();
   }
 }

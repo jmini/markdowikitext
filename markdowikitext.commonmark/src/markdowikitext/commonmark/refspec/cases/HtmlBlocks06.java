@@ -12,7 +12,7 @@ public class HtmlBlocks06 extends RefSpecCase {
     StringBuilder sb = new StringBuilder();
     sb.append("<?php");
     sb.append(BR);
-    sb.append("  echo 'foo'");
+    sb.append("  echo '>';");
     sb.append(BR);
     sb.append("?>");
     return sb.toString();
@@ -22,7 +22,7 @@ public class HtmlBlocks06 extends RefSpecCase {
     StringBuilder sb = new StringBuilder();
     sb.append("<?php");
     sb.append(BR);
-    sb.append("  echo 'foo'");
+    sb.append("  echo '>';");
     sb.append(BR);
     sb.append("?>");
     return sb.toString();
