@@ -24,13 +24,19 @@ class Main {
 	}
 	
 	def static create(Spec spec, Param param) {
+		val cases = spec.cases;
+		
+		//RefSpec - one file for each case:
 		val folder = JavaUtil::toFolder(RefSpecCaseGenerator::PACKAGE, param)
 		folder.listFiles.filter[it.name.endsWith("java")].forEach[it.delete]
-		val cases = spec.cases;
 		cases.forEach[
 			RefSpecCaseGenerator::toCaseFile(it, param)
 		]
+		
+		//RefSpec - AllCases class:
 		RefSpecCaseGenerator::toAllCaseFile(cases, param)
+		
+		//Test suite - CommonMarkTestBase class:
 		CommonMarkGenerator::toTestFile(cases, param)
 	}
 	

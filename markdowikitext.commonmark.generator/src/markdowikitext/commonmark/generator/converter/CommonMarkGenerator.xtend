@@ -17,7 +17,7 @@ class CommonMarkGenerator {
 		javaClass.setPackage("markdowikitext.commonmark")
 		javaClass.addImport("junit.framework.TestCase")
 		javaClass.addImport(typeof(Pattern))
-		javaClass.setName("AbstractCommonMark")
+		javaClass.setName("CommonMarkTestBase")
 		javaClass.setSuperType("TestCase")
 		
 		javaClass.addField('private static final String BR = System.getProperty("line.separator")')

@@ -1,0 +1,7 @@
+Replace this text file with "roaster-api-2.8.2.Final-source.jar".
+
+Download it on maven central:
+http://search.maven.org/#search|ga|1|g:%22org.jboss.forge.roaster%22
+
+See: https://github.com/forge/roaster
+

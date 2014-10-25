@@ -8,6 +8,8 @@ import com.google.common.base.Charsets
 import java.io.File
 import com.google.common.io.Files
 import com.google.common.base.CharMatcher
+import org.jboss.forge.roaster.model.util.Formatter
+import java.util.Properties
 
 class JavaUtil {
 	def static toClassName(SpecCase c) {
@@ -45,7 +47,12 @@ class JavaUtil {
 		val file = new File(folder, javaClass.name + ".java")
 		
 		Files::createParentDirs(file)
-		Files::write(javaClass.toString, file, Charsets::UTF_8)
+		val inputStream = Files::newReader(new File(param.formatterPropFile), Charsets::UTF_8)
+		val Properties prop = new Properties
+		prop.load(inputStream)
+		var content = Formatter::format(prop, javaClass)
+		content = content.replaceAll("\t", "  ")
+		Files::write(content, file, Charsets::UTF_8)
 		println ("write: " + file.absolutePath)
 	}
 	
